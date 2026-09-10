@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://github.com/infoknahmed/prism-extension/actions/workflows/ci.yml"><img src="https://github.com/infoknahmed/prism-extension/actions/workflows/ci.yml/badge.svg" alt="CI status" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-8b5cf6.svg" alt="MIT License" /></a>
-  <img src="https://img.shields.io/badge/version-1.0.0-00e5ff.svg" alt="v1.0.0" />
+  <img src="https://img.shields.io/badge/version-1.1.0-00e5ff.svg" alt="v1.1.0" />
   <a href="https://infoknahmed.github.io/prism-extension/"><img src="https://img.shields.io/badge/privacy%20policy-8b5cf6?logo=githubpages" alt="Privacy Policy" /></a>
 </p>
 
@@ -48,14 +48,14 @@ Every tagged release (see [Releases](https://github.com/infoknahmed/prism-extens
 | Item | Value |
 |---|---|
 | **Extension ID** | `jnpkmmbfccpljgfechndpgnaegfilijh` |
-| **Latest CRX** | <https://github.com/infoknahmed/prism-extension/releases/latest/download/prism-v1.0.0.crx> |
+| **Latest CRX** | <https://github.com/infoknahmed/prism-extension/releases/latest/download/prism-v1.1.0.crx> |
 | **Update manifest** | <https://github.com/infoknahmed/prism-extension/releases/latest/download/updates.xml> |
 
 The ID is deterministic — derived from the CRX signing key — so it never changes across versions. A CRX installed from any release will always keep this same ID and can pick up updates.
 
 ### Drag-and-drop install
 
-1. Download `prism-v1.0.0.crx` from the [latest release](https://github.com/infoknahmed/prism-extension/releases/latest)
+1. Download `prism-v1.1.0.crx` from the [latest release](https://github.com/infoknahmed/prism-extension/releases/latest)
 2. Open `brave://extensions` / `vivaldi://extensions` / `edge://extensions`
 3. Enable **Developer mode**
 4. Drag the `.crx` file onto the extensions page → confirm the install prompt
@@ -128,7 +128,7 @@ npm install          # esbuild
 npm run icons        # regenerate icons/icon{16,48,128}.png from icons/icon.svg
 npm run build        # minified dist/ (esbuild, chrome100+firefox113 target)
 npm test             # self-diagnostics (unit + pipeline + content-script simulation)
-npm run pack         # build + zip → dist/prism-v1.0.0.zip
+npm run pack         # build + zip → dist/prism-v1.1.0.zip
 ```
 
 One-shot: `./build.sh` (macOS/Linux/Git Bash) or `build.bat` (Windows).
@@ -137,7 +137,7 @@ One-shot: `./build.sh` (macOS/Linux/Git Bash) or `build.bat` (Windows).
 
 ## Deploying to the Chrome Web Store
 
-1. `npm run pack` → produces `dist/prism-v1.0.0.zip`
+1. `npm run pack` → produces `dist/prism-v1.1.0.zip`
 2. Go to the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole)
 3. Pay the one-time $5 registration fee (first release only)
 4. **New item** → upload the zip

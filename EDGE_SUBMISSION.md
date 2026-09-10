@@ -1,8 +1,8 @@
 # Microsoft Edge Add-ons — Submission Guide for Prism
 
-This guide walks you through publishing **Prism v1.0.0** to the Microsoft Edge Add-ons store. Registration is **free** — unlike the Chrome Web Store, there is no developer fee.
+This guide walks you through publishing **Prism v1.1.0** to the Microsoft Edge Add-ons store. Registration is **free** — unlike the Chrome Web Store, there is no developer fee.
 
-**Package to upload:** `dist/prism-v1.0.0.zip` (122 KB — the same package used for the Chrome Web Store; Edge accepts Chromium MV3 packages as-is)
+**Package to upload:** `dist/prism-v1.1.0.zip` (the same package used for the Chrome Web Store; Edge accepts Chromium MV3 packages as-is)
 
 ---
 
@@ -22,7 +22,7 @@ This guide walks you through publishing **Prism v1.0.0** to the Microsoft Edge A
 
 ## Step 3 — Upload the package
 
-1. On the **Packages** tab, upload `dist/prism-v1.0.0.zip`.
+1. On the **Packages** tab, upload `dist/prism-v1.1.0.zip`.
 2. Wait for validation. It should pass automatically (valid MV3 manifest, correct icons 16/48/128).
 
 ## Step 4 — Store listing (fill in exactly this)
@@ -69,7 +69,7 @@ Also state (this matches the published privacy policy):
 
 | Item | Value |
 |---|---|
-| Version | 1.0.0 |
+| Version | 1.1.0 |
 | Manifest | MV3 (Edge-compatible; `manifest.edge.json` in the repo = `manifest.json` minus `minimum_chrome_version`) |
 | Edge minimum | Edge 113+ recommended (matches Chromium 100+ baseline; test in Edge before submitting) |
 

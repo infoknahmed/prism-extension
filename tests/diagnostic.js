@@ -30,7 +30,7 @@ function makeChromeStub(listeners, storageData) {
       onMessage: ev(listeners.runtimeMessage),
       onInstalled: ev(listeners.installed),
       openOptionsPage() {},
-      getManifest() { return { version: '1.0.0' }; },
+      getManifest() { return { version: '1.1.0' }; },
       getURL(rel) { return 'chrome-extension://test-extension-id/' + rel; },
       sendMessage(msg, cb) { if (cb) setTimeout(() => cb({ ok: true }), 0); }
     },

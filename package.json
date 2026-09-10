@@ -1,6 +1,6 @@
 {
   "name": "prism-extension",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Prism — refract your prompts into clarity. Analyzes and optimizes your AI prompts for ChatGPT, Claude, Gemini, DeepSeek and Perplexity.",
   "private": true,
   "license": "MIT",
