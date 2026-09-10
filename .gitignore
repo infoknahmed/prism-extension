@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output (keep dist/ if you want, remove the next line if so)
+# dist/
+
+# Environment and secrets
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Temporary
+*.zip
+*.tmp

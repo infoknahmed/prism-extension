@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prism — Dummy Chat Page</title>
+  <style>
+    body { font-family: ui-sans-serif, system-ui, sans-serif; background: #101014; color: #e8e8f0; margin: 0; padding: 40px; }
+    .chat { max-width: 720px; margin: 0 auto; }
+    .msg { padding: 14px 18px; border-radius: 12px; margin-bottom: 14px; line-height: 1.6; }
+    .user { background: #1d1d28; margin-left: 80px; }
+    .assistant { background: #17171f; margin-right: 80px; }
+    .inputbar { display: flex; gap: 10px; margin-top: 24px; }
+    #prompt-textarea { flex: 1; min-height: 70px; background: #1b1b26; color: inherit; border: 1px solid #2c2c3a; border-radius: 12px; padding: 12px 14px; font-size: 14px; font-family: inherit; resize: vertical; }
+    .send { background: #8b5cf6; color: #fff; border: none; border-radius: 12px; padding: 0 22px; font-size: 14px; font-weight: 600; cursor: pointer; }
+    .note { color: #9a9ab0; font-size: 12.5px; margin-top: 18px; line-height: 1.6; }
+    code { background: #1b1b26; padding: 1px 6px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <div class="chat">
+    <div class="msg user" data-message-author-role="user">Can you help me with my startup pitch?</div>
+    <div class="msg assistant" data-message-author-role="assistant">Sure — what stage is the startup at, and who is the audience for the pitch?</div>
+    <div class="msg user" data-message-author-role="user">Pre-seed, audience is angel investors.</div>
+    <div class="msg assistant" data-message-author-role="assistant">Great. Draft the key points and I'll structure them.</div>
+
+    <div class="inputbar">
+      <textarea id="prompt-textarea" placeholder="Type a test prompt here, e.g. 'write something good about stuff'"></textarea>
+      <button class="send">Send</button>
+    </div>
+
+    <p class="note">
+      <strong>Manual test page.</strong> Load the extension unpacked, then open this file via
+      <code>chrome-extension://&lt;your-id&gt;/tests/dummy-chat.html</code> — the coach button should appear,
+      and the panel should open with <kbd>Ctrl+Shift+E</kbd>. This page is not auto-injected
+      (extension content scripts match only real AI chat sites), so also verify the flow works by
+      visiting ChatGPT/Claude in a tab, or run the automated simulation: <code>npm test</code>.
+    </p>
+  </div>
+</body>
+</html>

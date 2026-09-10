@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "provider": "offline",
+  "privacy": {
+    "allowCloudAi": false
+  },
+  "offlineMode": true,
+  "models": {
+    "openai": "gpt-4o-mini",
+    "anthropic": "claude-sonnet-4-20250514",
+    "gemini": "gemini-1.5-flash",
+    "openrouter": "openai/gpt-4o-mini",
+    "ollama": "llama3.1"
+  },
+  "apiKeys": {
+    "openai": "",
+    "anthropic": "",
+    "gemini": "",
+    "openrouter": ""
+  },
+  "ollamaUrl": "http://localhost:11434",
+  "appearance": {
+    "theme": "dark",
+    "accent": "violet",
+    "fontSize": "medium",
+    "panelPosition": "auto"
+  },
+  "behavior": {
+    "showButtonOnSites": true,
+    "autoAnalyzeOnFocus": false,
+    "toastDuration": 2600,
+    "historyLimit": 200,
+    "historyDays": 60,
+    "cacheTtlMinutes": 30
+  },
+  "learning": {
+    "enabled": true,
+    "tonePreference": "auto",
+    "favoriteActions": {}
+  }
+}
