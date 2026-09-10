@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prism — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121c;
+      --border: #23233a;
+      --text: #e8e8f2;
+      --muted: #9a9ab0;
+      --cyan: #00e5ff;
+      --purple: #8b5cf6;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      padding: 48px 24px 96px;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 56px; }
+    .logo {
+      display: inline-grid;
+      place-items: center;
+      width: 72px; height: 72px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(0,229,255,.12), rgba(139,92,246,.12));
+      border: 1px solid var(--border);
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(90deg, var(--cyan), var(--purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tagline { color: var(--muted); margin-top: 8px; font-size: 1rem; }
+    .updated {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 4px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: .82rem;
+      color: var(--muted);
+    }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 650;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    h2 .num { color: var(--cyan); margin-right: 8px; font-variant-numeric: tabular-nums; }
+    p { color: var(--muted); margin-bottom: 10px; }
+    p:last-child { margin-bottom: 0; }
+    strong, b { color: var(--text); font-weight: 600; }
+    ul { list-style: none; }
+    li { color: var(--muted); padding: 5px 0 5px 22px; position: relative; }
+    li::before { content: "◈"; position: absolute; left: 0; color: var(--purple); font-size: .8rem; top: 8px; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .85em;
+      background: rgba(139,92,246,.1);
+      border: 1px solid var(--border);
+      padding: 1px 6px;
+      border-radius: 6px;
+      color: var(--cyan);
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer { text-align: center; margin-top: 48px; color: var(--muted); font-size: .85rem; }
+    footer .sep { color: var(--purple); margin: 0 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">💎</div>
+      <h1>Prism — Privacy Policy</h1>
+      <p class="tagline">Refract your prompts into clarity.</p>
+      <span class="updated">Last Updated: 2026-09-10</span>
+    </header>
+
+    <section id="introduction">
+      <h2><span class="num">01</span>Introduction</h2>
+      <p><strong>Prism</strong> is a browser extension that helps you write better prompts for AI chat assistants such as ChatGPT, Claude, Gemini, DeepSeek, and Perplexity. It analyzes the text you type or select, suggests an improved version, and offers a library of reusable prompt templates.</p>
+      <p>This policy explains what data Prism touches — and, just as importantly, what it does not.</p>
+    </section>
+
+    <section id="data-collection">
+      <h2><span class="num">02</span>Data Collection</h2>
+      <p><strong>Prism does not collect, transmit, or store any personal data by default.</strong> There are no analytics, no tracking, no telemetry, and no remote code.</p>
+      <p>All prompt analysis — readability, specificity, tone, token estimates, safety checks, and the rule-based rewriter — runs <strong>entirely on your device</strong>, locally in your browser. Your prompt text never leaves your machine unless you explicitly opt in to cloud AI (see below).</p>
+    </section>
+
+    <section id="api-keys">
+      <h2><span class="num">03</span>API Keys</h2>
+      <p>If you choose to enable cloud AI, you supply your own API key for the provider you pick (OpenAI, Anthropic, Gemini, or OpenRouter).</p>
+      <ul>
+        <li>Keys are encrypted locally with <strong>AES-GCM</strong> (key derived via PBKDF2, 120,000 iterations) before being written to browser storage.</li>
+        <li>Keys are sent <strong>directly from your browser to the provider you selected</strong> — never to us. Prism operates no servers.</li>
+        <li>Keys are <strong>never included</strong> in backups or exports.</li>
+      </ul>
+    </section>
+
+    <section id="data-storage">
+      <h2><span class="num">04</span>Data Storage</h2>
+      <p>Settings, coaching history, favorites, and your custom templates are stored locally on your device using the browser's <code>chrome.storage.local</code> API. This data never leaves your device, is not synced to any account, and is removed permanently when you remove the extension or use <em>Options → Data → Reset all settings</em>.</p>
+    </section>
+
+    <section id="third-party">
+      <h2><span class="num">05</span>Third-Party Services</h2>
+      <p>Prism integrates with the following third-party services <strong>only when you explicitly enable cloud AI</strong> and only with your own API key:</p>
+      <ul>
+        <li><strong>OpenAI</strong> (api.openai.com)</li>
+        <li><strong>Anthropic</strong> (api.anthropic.com)</li>
+        <li><strong>Google Gemini</strong> (generativelanguage.googleapis.com)</li>
+        <li><strong>OpenRouter</strong> (openrouter.ai)</li>
+        <li><strong>Ollama</strong> — local models on your own machine (localhost), which never involve any network transmission beyond your computer.</li>
+      </ul>
+      <p>When active, only the current prompt text (plus a short conversation excerpt you opted into) is sent to the chosen provider for the single purpose of rewriting your prompt. Each provider processes that text under its own privacy policy.</p>
+    </section>
+
+    <section id="permissions">
+      <h2><span class="num">06</span>Permissions Justification</h2>
+      <ul>
+        <li><strong>storage</strong> — save your settings, history, favorites, templates, and encrypted API keys locally on your device.</li>
+        <li><strong>activeTab</strong> — read the prompt you're typing on the current AI chat tab when you invoke Prism.</li>
+        <li><strong>scripting</strong> — inject the Prism panel and floating button into supported AI chat sites so the extension can function.</li>
+        <li><strong>clipboardWrite</strong> — copy the optimized prompt to your clipboard when you click Copy.</li>
+      </ul>
+    </section>
+
+    <section id="children">
+      <h2><span class="num">07</span>Children's Privacy</h2>
+      <p>Prism is not intended for users under the age of 13. We do not knowingly collect any personal information from children.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">08</span>Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. Material changes will be announced through an extension update, and the "Last Updated" date at the top of this page will always reflect the current version.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">09</span>Contact</h2>
+      <p>Questions about this policy? Contact us at <a href="mailto:support@prism-extension.dev">support@prism-extension.dev</a>.</p>
+    </section>
+
+    <footer>
+      <a href="index.html">Prism</a><span class="sep">◈</span><a href="https://github.com/infoknahmed/prism-extension">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prism — Refract your prompts into clarity</title>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121c;
+      --border: #23233a;
+      --text: #e8e8f2;
+      --muted: #9a9ab0;
+      --cyan: #00e5ff;
+      --purple: #8b5cf6;
+      --pink: #ec4899;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background:
+        radial-gradient(600px 300px at 50% -50px, rgba(139,92,246,.16), transparent),
+        var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      padding: 72px 24px 96px;
+    }
+    .container { max-width: 800px; margin: 0 auto; text-align: center; }
+    .logo {
+      display: inline-grid;
+      place-items: center;
+      width: 88px; height: 88px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(0,229,255,.12), rgba(139,92,246,.12));
+      border: 1px solid var(--border);
+      font-size: 44px;
+      margin-bottom: 24px;
+      box-shadow: 0 0 60px rgba(139,92,246,.25);
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 750;
+      letter-spacing: -0.03em;
+      background: linear-gradient(90deg, var(--cyan), var(--purple), var(--pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tagline { color: var(--muted); font-size: 1.2rem; margin: 14px auto 8px; max-width: 560px; }
+    .sub { color: var(--muted); font-size: .95rem; max-width: 620px; margin: 0 auto 36px; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      text-align: left;
+    }
+    .feature b { display: block; margin-bottom: 6px; color: var(--text); }
+    .feature span { color: var(--muted); font-size: .9rem; }
+    .feature .ic { font-size: 1.4rem; display: block; margin-bottom: 10px; }
+    .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 12px 26px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: .95rem;
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(90deg, var(--cyan), var(--purple));
+      color: #0a0a0f;
+      box-shadow: 0 8px 24px rgba(139,92,246,.35);
+    }
+    .btn-ghost { border: 1px solid var(--border); color: var(--text); }
+    .btn-ghost:hover { border-color: var(--purple); }
+    footer { margin-top: 56px; color: var(--muted); font-size: .85rem; }
+    footer a { color: var(--cyan); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">💎</div>
+    <h1>Prism</h1>
+    <p class="tagline">Refract your prompts into clarity.</p>
+    <p class="sub">A privacy-first browser extension that analyzes and optimizes your AI prompts for ChatGPT, Claude, Gemini, DeepSeek, and Perplexity — with smart analysis, a template library, and optional cloud AI.</p>
+
+    <div class="features">
+      <div class="feature"><span class="ic">🔍</span><b>Smart analysis</b><span>Clarity, specificity, tone, and safety scores — computed locally, always.</span></div>
+      <div class="feature"><span class="ic">✨</span><b>One-click optimization</b><span>Side-by-side original vs optimized. Copy or replace in place.</span></div>
+      <div class="feature"><span class="ic">📚</span><b>Template library</b><span>10 built-in professional templates plus your own, with {placeholder} support.</span></div>
+      <div class="feature"><span class="ic">🔒</span><b>Privacy-first</b><span>Rule-based engine runs 100% on your device. Cloud AI is strictly opt-in.</span></div>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="https://github.com/infoknahmed/prism-extension">★ View on GitHub</a>
+      <a class="btn btn-ghost" href="privacy.html">Privacy Policy</a>
+    </div>
+
+    <footer>MIT License · © 2026 Prism contributors · <a href="https://github.com/infoknahmed/prism-extension">github.com/infoknahmed/prism-extension</a></footer>
+  </div>
+</body>
+</html>
