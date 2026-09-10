@@ -12,6 +12,7 @@
     "verify": "npm run icons && npm run build && npm test && node --check background.js && node --check content.js && node --check utils/storage.js && node --check utils/promptAnalyzer.js && node --check utils/templateManager.js && node --check utils/api.js && node --check popup/popup.js && node --check options/options.js && node --check scripts/build.js && node --check scripts/pack.js && node --check scripts/generate-icons.js && echo VERIFY_OK"
   },
   "devDependencies": {
+    "crx3": "^2.0.0",
     "esbuild": "^0.24.0"
   }
 }
