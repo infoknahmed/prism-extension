@@ -1,0 +1,52 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - run: npm install
+
+      - run: npm run icons
+
+      - run: npm test
+
+      - run: npm run build
+
+      - run: npm run pack
+
+      - name: Extract version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Restore CRX signing key
+        run: echo "${{ secrets.PRISM_CRX_KEY }}" | base64 -d > prism-key.pem
+
+      - name: Generate CRX
+        run: |
+          npm install --save-dev crx3
+          npx crx3 dist/ --crx dist/prism-${{ steps.version.outputs.VERSION }}.crx --key prism-key.pem
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: "Prism ${{ steps.version.outputs.VERSION }}"
+          files: |
+            dist/prism-*.zip
+            dist/prism-*.crx
+            dist/updates.xml
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
