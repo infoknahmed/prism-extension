@@ -23,3 +23,6 @@ Thumbs.db
 # Temporary
 *.zip
 *.tmp
+
+# Extension signing private key (NEVER commit this)
+*.pem
