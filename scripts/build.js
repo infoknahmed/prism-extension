@@ -82,6 +82,23 @@ async function main() {
   copyDir(path.join(ROOT, 'assets'), path.join(DIST, 'assets'));
   copyDir(path.join(ROOT, 'icons'), path.join(DIST, 'icons'));
 
+  // Chromium auto-update manifest, generated per build so `version` always
+  // matches manifest.json. The codebase URL uses `releases/latest`, so the
+  // same XML works for every release once attached as a release asset.
+  const pkg = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8'));
+  const extId = 'jnpkmmbfccpljgfechndpgnaegfilijh';
+  const repo = 'infoknahmed/prism-extension';
+  const updatesXml = [
+    '<?xml version=\'1.0\' encoding=\'UTF-8\'?>',
+    '<gupdate xmlns=\'http://www.google.com/update2/response\' protocol=\'2.0\'>',
+    '  <app appid=\'' + extId + '\'>',
+    '    <updatecheck codebase=\'https://github.com/' + repo + '/releases/latest/download/prism-v' + pkg.version + '.crx\' version=\'' + pkg.version + '\' />',
+    '  </app>',
+    '</gupdate>',
+    ''
+  ].join('\n');
+  fs.writeFileSync(path.join(DIST, 'updates.xml'), updatesXml);
+
   // Sanity checks: every manifest-referenced file exists in dist.
   const missing = [];
   const refs = [

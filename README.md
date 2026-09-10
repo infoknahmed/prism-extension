@@ -41,6 +41,55 @@ A Manifest V3 browser extension that helps you write dramatically better prompts
 
 Works identically in Edge and Brave. For **Firefox** see "Firefox build" below.
 
+## Install from a release (.crx for Brave, Vivaldi, Edge, Chromium)
+
+Every tagged release (see [Releases](https://github.com/infoknahmed/prism-extension/releases)) attaches a signed `prism-v<version>.crx` built by CI.
+
+| Item | Value |
+|---|---|
+| **Extension ID** | `jnpkmmbfccpljgfechndpgnaegfilijh` |
+| **Latest CRX** | <https://github.com/infoknahmed/prism-extension/releases/latest/download/prism-v1.0.0.crx> |
+| **Update manifest** | <https://github.com/infoknahmed/prism-extension/releases/latest/download/updates.xml> |
+
+The ID is deterministic — derived from the CRX signing key — so it never changes across versions. A CRX installed from any release will always keep this same ID and can pick up updates.
+
+### Drag-and-drop install
+
+1. Download `prism-v1.0.0.crx` from the [latest release](https://github.com/infoknahmed/prism-extension/releases/latest)
+2. Open `brave://extensions` / `vivaldi://extensions` / `edge://extensions`
+3. Enable **Developer mode**
+4. Drag the `.crx` file onto the extensions page → confirm the install prompt
+
+> Chrome itself may refuse non-store CRX installs; Brave, Vivaldi, and Edge allow them.
+
+### Auto-updates via `updates.xml`
+
+Drag-and-drop installs do **not** get an update URL, so they won't auto-update. To install Prism with silent updates from GitHub Releases, register it via browser policy, pointing at the update manifest:
+
+**Windows** — in `regedit`, under the policy hive for your browser, create `ExtensionInstallForcelist` and add a string value `1` with data:
+
+```
+jnpkmmbfccpljgfechndpgnaegfilijh;https://github.com/infoknahmed/prism-extension/releases/latest/download/updates.xml
+```
+
+Policy key per browser:
+
+| Browser | Registry key |
+|---|---|
+| Chrome / Chromium | `HKLM\Software\Policies\Google\Chrome\ExtensionInstallForcelist` |
+| Edge | `HKLM\Software\Policies\Microsoft\Edge\ExtensionInstallForcelist` |
+| Brave | `HKLM\Software\Policies\BraveSoftware\Brave\ExtensionInstallForcelist` |
+
+**Linux** — drop a JSON file named `jnpkmmbfccpljgfechndpgnaegfilijh.json` into the browser's external-extensions directory (e.g. `/usr/share/google-chrome/extensions/`) with:
+
+```json
+{
+  "external_update_url": "https://github.com/infoknahmed/prism-extension/releases/latest/download/updates.xml"
+}
+```
+
+The browser then polls `updates.xml`, compares the `version` attribute against the installed CRX, and fetches the newer `codebase` CRX automatically when a new release is published.
+
 ## Setup
 
 Open the popup → ⚙️ (or right-click the toolbar icon → Options).
