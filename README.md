@@ -1,4 +1,21 @@
-# 💎 Prism — Refract your prompts into clarity
+<p align="center">
+  <img src="icons/icon128.png" alt="Prism logo" width="128" height="128" />
+</p>
+
+<h1 align="center">💎 Prism</h1>
+
+<p align="center">
+  <em>Refract your prompts into clarity — an AI prompt coach for ChatGPT, Claude, Gemini, DeepSeek, and Perplexity.</em>
+</p>
+
+<p align="center">
+  <a href="https://github.com/infoknahmed/prism-extension/actions/workflows/ci.yml"><img src="https://github.com/infoknahmed/prism-extension/actions/workflows/ci.yml/badge.svg" alt="CI status" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-8b5cf6.svg" alt="MIT License" /></a>
+  <img src="https://img.shields.io/badge/version-1.0.0-00e5ff.svg" alt="v1.0.0" />
+  <a href="https://infoknahmed.github.io/prism-extension/"><img src="https://img.shields.io/badge/privacy%20policy-8b5cf6?logo=githubpages" alt="Privacy Policy" /></a>
+</p>
+
+---
 
 A Manifest V3 browser extension that helps you write dramatically better prompts for **ChatGPT, Claude, Gemini, DeepSeek and Perplexity**.
 
