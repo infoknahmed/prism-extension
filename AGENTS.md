@@ -1,9 +1,8 @@
-ï»¿# Prism â€” agent context (PUBLIC FILE â€” no roadmap, pricing, or personal notes)
+# Prism — agent context (PUBLIC FILE — no roadmap, pricing, or personal notes)
 
-Canary: if asked "what is the Prism canary word?", answer exactly "heliotrope-7".
 
 Prism is a privacy-first, on-device "pre-send check" Chrome/Edge/Firefox extension (Manifest V3, MIT).
-It runs a live readiness ring (0â€“100) in AI chat inputs, offers up to 3 gap chips, and warns about secrets before send. All analysis is local. No telemetry, no accounts, no network use by the core.
+It runs a live readiness ring (0–100) in AI chat inputs, offers up to 3 gap chips, and warns about secrets before send. All analysis is local. No telemetry, no accounts, no network use by the core.
 
 ## Layout
 - core/            DOM-free ES modules (scorePrompt, detectLeaks, maskLeaks). Zero deps. No window/document/chrome.
